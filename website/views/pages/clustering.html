@@ -20,7 +20,86 @@
     <article>
         <section class="container mt-4">
             <h3 class="mb-4">Clustering</h3>
-            <p>Welcome to my Data Science project on gun violence in America. This website explores the scope, patterns, and trends of firearm-related incidents across the country using real datasets, visualizations, and machine learning models.</p>
+            <p>Clustering is an unsupervised machine learning technique that groups data points so that items within the same cluster are more similar to each other than to items in other clusters. It helps reveal hidden patterns or structures in datasets without requiring labeled outcomes.</p>
+
+
+            <h4 class="mt-4">Partitional vs Hierarchical Clustering</h4>
+            <p>Partitional clustering divides a dataset into a pre-specified number of clusters. A common example is k-means clustering, which assigns points to the nearest cluster centroid and updates centroids until convergence. It works best for spherical, evenly sized clusters when the number of clusters is known in advance.</p>
+            <p>Hierarchical clustering builds a nested tree of clusters (a dendrogram). Agglomerative (bottom-up) methods start with each point as its own cluster and merge the closest pairs, while divisive (top-down) methods start with one large cluster and split it. This method does not require pre-specifying the number of clusters and reveals structure at multiple levels.</p>
+            <div class="img-row">
+                <div class="img-col">
+                    <figure>
+                        <img src="../../recourses/img/images/partitional_clustering.png"
+                            alt="Partitional Clustering"
+                            class="equal-height-img">
+                        <figcaption class="text-muted small">Islam, Tanbir. “A Few Types of Clustering Algorithms.” Computing4All</figcaption>
+                    </figure>
+                </div>
+                <div class="img-col">
+                    <figure>
+                        <img src="../../recourses/img/images/hierarchical_clustering.png"
+                            alt="Hierarchical Clustering"
+                            class="equal-height-img">
+                        <figcaption class="text-muted small">IBM via Joshua Noble</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <h4 class="mt-4">Distance Metrics</h4>
+            <p>Clustering relies on similarity measures, often expressed as distances. Common choices include:</p>
+            <ul>
+                <li>Euclidean distance: Straight-line distance; best for continuous numeric data.</li>
+                <li>Manhattan distance: Sum of absolute differences; useful for independent dimensions.</li>
+                <li>Cosine similarity/distance: Measures angle between vectors; common in text analysis.</li>
+                <li>Minkowski distance: General form that includes Euclidean and Manhattan as special cases.</li>
+            </ul>
+
+
+            <h4 class="mt-4">Using Clustering for Discovery</h4>
+            <p>In practice, clustering enables discovery by:</p>
+            <ul>
+                <li>Revealing groups or categories of events with shared characteristics.</li>
+                <li>Detecting outliers or unusual data points.</li>
+                <li>Providing insights into relationships between clusters at varying levels of granularity.</li>
+            </ul>
+            <p>Combining partitional and hierarchical methods can give a more complete view: partitional clustering quickly partitions data, while hierarchical clustering illustrates how groups relate.</p>
+        </section>
+    </article>
+
+    <article>
+        <section class="container mt-4" id="clustering_data">
+            <h4 class="mt-4">Data & Results</h4>
+        </section>
+        <section class="container mt-4" id="mass_shootings">
+            
+            <h5>Mass Shootings</h5>
+            <a href="../layouts/clustering_mass_shooting.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+
+        <section class="container mt-4" id="school_shootings">
+            <h5>School Shootings</h5>
+            <a href="../layouts/clustering_school_shooting.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+
+        <section class="container mt-4" id="officer_involved">
+            <h5>Officer Involved Shootings</h5>
+            <a href="../layouts/clustering_officer_involved.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+
+        <section class="container mt-4" id="accidental_injury">
+            <h5>Accidental Injury</h5>
+            <a href="../layouts/clustering_accidental_injury.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+
+        <section class="container mt-4" id="accidental_death">
+            <h5>Accidental Death</h5>
+            <a href="../layouts/clustering_accidental_death.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+    </article>
+
+    <article>
+        <section class="container mt-4" id="pca_data">
+            <h4 class="mt-4">Conclusions</h4>
         </section>
     </article>
 

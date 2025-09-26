@@ -16,6 +16,82 @@
 <body>
     <!-- Navigation Bar -->
     <div id="navbar-placeholder"></div>
+    <article>
+        <section class="container mt-4">
+            <h3 class="mb-4">Principal Component Analysis (PCA)</h3>
+            <p>
+                Principal Component Analysis (PCA) is a widely used statistical technique for reducing the dimensionality of data while retaining as much of its variability as possible. 
+                It works by transforming the data into a new coordinate system where the greatest variances lie on the first axes (called principal components).
+            </p>
+
+            <!-- Eigenvalues and Eigenvectors -->
+            <div class="mb-4">
+                <h4>Eigenvalues and Eigenvectors</h4>
+                <p>
+                    At the core of PCA are eigenvalues and eigenvectors. 
+                    Eigenvectors determine the directions of the new feature space (the principal components), while eigenvalues indicate the amount of variance captured by each component. 
+                    A larger eigenvalue means that component explains more of the data's variability. 
+                    By ranking components according to eigenvalues, we decide which ones to keep.
+                </p>
+            </div>
+
+            <!-- Dimensionality Reduction -->
+            <div class="mb-4">
+                <h4>Dimensionality Reduction</h4>
+                <p>
+                    Dimensionality reduction is the process of reducing the number of features in a dataset while preserving its essential patterns. 
+                    High-dimensional datasets are often difficult to analyze and visualize because of redundancy and noise. PCA addresses this by projecting data onto fewer dimensions that capture the most variance, simplifying both analysis and visualization.
+                </p>
+            </div>
+
+            <!-- Importance -->
+            <div class="mb-4">
+                <h4>Why is Dimensionality Reduction Important?</h4>
+                <p>
+                    High-dimensional data (sometimes called the "curse of dimensionality") poses challenges such as increased computational cost, difficulty in visualization, and risk of overfitting. 
+                    PCA helps to address these challenges by keeping only the most informative features, reducing noise, and making patterns in the data clearer. 
+                    This makes clustering, classification, and visualization more effective.
+                </p>
+            </div>
+        </section>
+    </article>
+
+    <article>
+        <section class="container mt-4" id="pca_data">
+            <h4 class="mt-4">Data & Results</h4>
+        </section>
+        <section class="container mt-4" id="mass_shootings">
+            
+            <h5>Mass Shootings</h5>
+            <a href="../layouts/pca_mass_shooting.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+
+        <section class="container mt-4" id="school_shootings">
+            <h5>School Shootings</h5>
+            <a href="../layouts/pca_school_shooting.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+
+        <section class="container mt-4" id="officer_involved">
+            <h5>Officer Involved Shootings</h5>
+            <a href="../layouts/pca_officer_involved.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+
+        <section class="container mt-4" id="accidental_injury">
+            <h5>Accidental Injury</h5>
+            <a href="../layouts/pca_accidental_injury.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+
+        <section class="container mt-4" id="accidental_death">
+            <h5>Accidental Death</h5>
+            <a href="../layouts/pca_accidental_death.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+    </article>
+
+    <article>
+        <section class="container mt-4" id="pca_data">
+            <h4 class="mt-4">Conclusions</h4>
+        </section>
+    </article>
 
     <script src="../../recourses/js/script.js"></script>
 </body>
