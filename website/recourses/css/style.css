@@ -1,4 +1,65 @@
-.navbar-nav .nav-link.active {
-    color: #000000 !important; /* Black for active link */
+/* COLORS
+dark red: 780000
+red: c1121f
+cream: fdf0d5
+dark blue: 003049
+blue: 669bbc
+*/
+.navbar-nav .nav-link.active 
+{
+    color: #d1d1d1!important; /* white for active link */
+}
+/* Target the actual navbar element (id in HTML is `navbar`) and override Bootstrap styles */
+#navbar 
+{
+    background-color: #0b2545 !important; /* navbar background */
+}
+/* Ensure nav links are visible on the dark background */
+#navbar .nav-link 
+{
+    color: #ffffff!important;
+}
+/* Keep active link fully white */
+#navbar .nav-link.active 
+{
+    color: #d1d1d1 !important;
+}
+
+/* Side-by-side image helper: uses flexbox to keep images same height and responsive */
+.img-row {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch; /* make children same height */
+    flex-wrap: wrap; /* wrap on small screens */
+}
+
+.img-row .img-col {
+    flex: 1 1 0; /* allow columns to take equal width */
+    min-width: 220px; /* prevent getting too narrow */
+}
+
+/* Make images cover their column while preserving aspect and matching height */
+.equal-height-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* crop if needed to fill height */
+    display: block;
+}
+
+/* When inside a figure with caption, ensure the figure fills its column and image keeps ratio */
+.img-col figure {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-col figure img {
+    flex: 1 1 auto;
+}
+
+/* Keep caption below the image with small spacing */
+.img-col figcaption {
+    margin-top: .5rem;
 }
 
