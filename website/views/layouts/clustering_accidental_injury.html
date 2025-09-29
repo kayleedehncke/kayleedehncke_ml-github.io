@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Prep & EDA - Mass Shootings</title>
+    <title>Clustering - Accidental Injury</title>
     <!-- Bootstrap CSS -->
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
@@ -18,20 +18,29 @@
     <div id="navbar-placeholder"></div>
     
     <article>
-        <h3 class="container mt-4">Accidental Injury by Firearm</h3>
-        <section class="container mt-4" id="acc_inj_raw">
-            <h5>Raw Data</h5>
-            <img src="../../recourses/img/tables/acc_inj_raw_table.png" alt="Accidental Injury Raw Data Table" class="img-fluid mb-3">
-        </section>    
-        <section class="container mt-4" id="acc_inj_shootings_cleaned">
-            <h5>Cleaned Data</h5>
-            <img src="../../recourses/img/tables/acc_inj_cleaned_table.png" alt="Accidental Injury Cleaned Data Table" class="img-fluid mb-3">
-        </section>
-        <section class="container mt-4" id="acc_inj_shootings_eda">
-            <h5>EDA</h5>
-            <img src="../../recourses/img/plots/acc_inj_by_state.png" alt="Accidental Injury by State Plot" class="img-fluid mb-3">
-            <img src="../../recourses/img/plots/acc_inj_by_year.png" alt="Accidental Injury by Year Plot" class="img-fluid mb-3">
-            <img src="../../recourses/img/plots/acc_inj_injury_killed_by_year.png" alt="Accidental Injury Injuries and Deaths by Year Plot" class="img-fluid mb-3">
+        <h3 class="container mt-4">Accidental Injury</h3>
+        <section class="container mt-4" id="acc_inj_clustering">
+            <h5>Clustering using K-Means</h5>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <img src="../../recourses/img/plots/acc_inj_VK_SK.png" alt="Accidental Injury VK vs SK" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="../../recourses/img/plots/acc_inj_VI_SK.png" alt="Accidental Injury VI vs SK" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="../../recourses/img/plots/acc_inj_VK_SI.png" alt="Accidental Injury VK vs SI" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="../../recourses/img/plots/acc_inj_VI_SI.png" alt="Accidental Injury VI vs SI" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="../../recourses/img/plots/acc_inj_VK_SA.png" alt="Accidental Injury VK vs SA" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="../../recourses/img/plots/acc_inj_VI_SA.png" alt="Accidental Injury VI vs SA" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
         </section> 
     </article>
 
