@@ -100,6 +100,14 @@
     <article>
         <section class="container mt-4" id="pca_data">
             <h4 class="mt-4">Conclusions</h4>
+            <p class="mt-4">
+                K-means clustering did not perform especially well on this dataset because the underlying features are very discrete (e.g., counts of victims and suspects). 
+                This discreteness makes it difficult to visually distinguish meaningful groupings—many points overlap at the same values, so the density of incidents is hard to see on scatterplots. 
+                As a result, the clusters produced by k-means were not easily interpretable. 
+                Additionally, the elbow method did not provide a clear “bend” to help identify the optimal number of clusters. 
+                Instead, the within-cluster sum of squares decreased in a pattern resembling a decreasing exponential function across nearly all values of k, which made it difficult to justify a specific choice of cluster number. 
+                Overall, these results suggest that k-means may not be the best clustering approach for this type of discrete event data.
+            </p>
         </section>
     </article>
 
