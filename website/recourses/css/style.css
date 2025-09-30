@@ -63,3 +63,29 @@ blue: 669bbc
     margin-top: .5rem;
 }
 
+.pca-img-row 
+{
+    display: flex;
+    gap: 20px;              /* space between images */
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.pca-img-col 
+{
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.pca-img-col img 
+{
+    height: 250px;          /* set same height for all */
+    width: auto;            /* scale proportionally */
+    object-fit: contain;    /* prevent cut-off */
+}
+
+
+

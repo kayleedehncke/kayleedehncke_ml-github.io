@@ -53,6 +53,22 @@
                     This makes clustering, classification, and visualization more effective.
                 </p>
             </div>
+            <div class="pca-img-row">
+                <div class="pca-img-col">
+                    <figure>
+                    <img src="../../recourses/img/images/pca_reduction.png"
+                        alt="PCA Dimension Reduction">
+                    <figcaption class="text-muted small">GeeksforGeeks</figcaption>
+                    </figure>
+                </div>
+                <div class="pca-img-col">
+                    <figure>
+                    <img src="../../recourses/img/images/pca_noisy.png"
+                        alt="PCA Noisy Data">
+                    <figcaption class="text-muted small">ResearchGate</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
     </article>
 
@@ -90,6 +106,13 @@
     <article>
         <section class="container mt-4" id="pca_data">
             <h4 class="mt-4">Conclusions</h4>
+            <p class="mt-4">
+                Overall, the PCA scatter plots showed clusters that overlap heavily, with no clean seperation.
+                Outliers dominated PCs instead of forming meaningful groups, which suggest K-Means struggles to find patterns in this projection.
+                The variance bar plots showed that no single principal component dominates, meaning the variance is spread across many dimensions.
+                That makes PCA less useful because it can't reduce the data to just one or two components without losing a lot of information.
+                Together, these suggest the structure of the data is too complex, noisy, or not well-aligned with PCA's assumptions (like linear relationships) or K-Means' assumptions (like spherical clusters of similar size).
+            </p>
         </section>
     </article>
 
