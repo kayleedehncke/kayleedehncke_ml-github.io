@@ -16,7 +16,81 @@
 <body>
     <!-- Navigation Bar -->
     <div id="navbar-placeholder"></div>
+    <article class="container mt-4">
+        <h3 class="mb-4">Naive Bayes</h3>
+            <p>
+                Naive Bayes (NB) is a family of probabilistic classifiers based on applying 
+                Bayes' Theorem with a strong independence assumption between features. 
+                Despite this “naive” assumption, it is widely used because it performs well on many real-world tasks, 
+                even when the independence assumption is not strictly true. The algorithm calculates the probability 
+                that a given input belongs to each possible class and assigns the input to the class with the highest posterior probability.
+            </p>
+            <p>
+                Naive Bayes is particularly effective for problems involving text classification, spam detection, 
+                and sentiment analysis, where features (such as word counts) are numerous and relatively independent. 
+                It is computationally efficient, easy to implement, and performs well even with small amounts of training data.
+            </p>
+            <p>
+                In this project, the focus is on the Multinomial Naive Bayes model, which is often used 
+                for discrete data such as term frequencies in text documents. This model assumes that features represent 
+                the number of times events occur (for example, the frequency of a word appearing in a document). 
+                It works by estimating the likelihood of observing a particular set of feature counts given a class label, 
+                making it well-suited for document classification tasks.
+            </p>
+            <p>
+                Another common variant is Bernoulli Naive Bayes, which is designed for binary or boolean features. 
+                Instead of using word counts, it records whether a feature (such as a specific word) is present or absent in a document. 
+                This makes Bernoulli NB particularly useful when modeling datasets that focus on feature occurrence rather than frequency.
+            </p>
+            <p>
+                Both models rely on the same underlying Bayes' Theorem but differ in how they interpret feature data. 
+                While Multinomial NB captures the intensity or frequency of features, Bernoulli NB focuses on their existence. 
+                Choosing between them depends on the nature of the dataset and how features are represented.
+            </p>
+    </article>
+    <article>
+        <section class="container mt-4" id="pca_data">
+            <h4 class="mt-4">Data & Results</h4>
+            <p>
+                Before applying the Naive Bayes algorithm, the data must be properly prepared and formatted. 
+                Since Naive Bayes is a supervised learning method, it requires 
+                labeled data—that is, each observation must include both the input features 
+                (such as word frequencies, attributes, or measurements) and a known output label 
+                (the class the model is trying to predict). Without labeled data, the model cannot learn 
+                the relationship between inputs and outputs, which is essential for classification tasks.
+            </p>
+            <p>
+                Once labeled data is available, it must be divided into two disjoint subsets: a 
+                Training Set and a Testing Set. 
+                The Training Set is used to “teach” the model by allowing it to estimate probabilities 
+                and learn from known examples, while the Testing Set is reserved for evaluating how well 
+                the model performs on unseen data. This separation ensures that the model’s accuracy 
+                reflects its ability to generalize rather than memorize patterns in the training data.
+            </p>
+            <p>
+                Typically, a common split is 70% of the data for training and 30% for testing, 
+                though this ratio can vary depending on dataset size. 
+                The two sets must be disjoint, meaning they cannot contain overlapping records, 
+                as this would lead to misleadingly high accuracy scores and poor real-world performance.
+            </p>
+        </section> 
+        </section>
+        <section class="container mt-4" id="mass_shootings">
+            
+            <h5>Mass Shootings</h5>
+            <a href="../layouts/nb_mass_shooting.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
 
+        <section class="container mt-4" id="school_shootings">
+            <h5>School Shootings</h5>
+            <a href="../layouts/nb_school_shooting.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+
+        <section class="container mt-4" id="officer_involved">
+            <h5>Officer Involved Shootings</h5>
+            <a href="../layouts/nb_officer_involved.html" class="btn btn-primary mb-3">View Details</a>
+        </section>
+    </article>
     <script src="../../recourses/js/script.js"></script>
 </body>
 </html>

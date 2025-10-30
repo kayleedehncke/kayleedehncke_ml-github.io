@@ -22,3 +22,6 @@ fetch('../layouts/navbar.html')
             }
         });
     })
+    .catch(error => console.error('Error loading navbar:', error));
+
+fetch('../../')
