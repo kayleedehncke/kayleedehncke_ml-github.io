@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DT - Mass Shootings</title>
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../recourses/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+    
+    <article>
+        <h3 class="container mt-4">Mass Shootings</h3>
+        <section class="container mt-4" id="mass_shootings_dt">
+            <div id="mass_shootings_dt-raw_data">
+                <h5>Sample Data</h5>
+                <img src="../../recourses/img/tables/mass_raw_table.png" alt="Mass Shootings Raw Data Table" class="img-fluid mb-3">
+                <a href="../../data/gunviolencearchive_mass_shooting_all_years.csv" target="_self">
+                    Click here to view the full sample dataset.
+                </a>
+            </div>
+            <div id="mass_shootings_dt-train">
+                <h5 class="mt-4">Training Data</h5>
+                <img src="../../recourses/img/tables/dt_train_mass.png" alt="Decision Trees Mass Shooting Training Data Table" class="img-fluid my-3">
+            </div>
+            <div id="mass_shootings_dt-train">
+                <h5 class="mt-4">Testing Data</h5>
+                <img src="../../recourses/img/tables/dt_test_mass.png" alt="Decision Trees Mass Shooting Test Data Table" class="img-fluid mb-3">
+            </div>
+            <div id="mass_shootings_dt-results">
+                <h5 class="mt-4">Confusion Matrix</h5>
+                <img src="../../recourses/img/plots/dt_cm_mass.png" width="600px" alt ="Decision Trees Mass Shooting Confusion Matrix" class="img-fluid mb-3">
+                <h5 class="mt-4">Feature Importance</h5>
+                <img src="../../recourses/img/plots/dt_feature_importance_mass.png" width="600px" alt ="Decision Trees Mass Shooting Feature Importance" class="img-fluid mb-3">
+                <h5 class="mt-4">Decision Tree using Random Forest</h5>
+                <img src="../../recourses/img/plots/dt_rf_mass.png" width="600px" alt ="Decision Trees Mass Shooting Random Forest" class="img-fluid mb-3">
+                <h5 class="mt-4">Shallow Decision Tree</h5>
+                <img src="../../recourses/img/plots/dt_shallow_mass.png" width="600px" alt ="Decision Trees Mass Shooting Shallow" class="img-fluid mb-3">
+                <h5 class="mt-4">Decision Tree using Entropy</h5>
+                <img src="../../recourses/img/plots/dt_entropy_mass.png" width="600px" alt ="Decision Trees Mass Shooting Entropy" class="img-fluid mb-3">
+                <h5 class="mt-4">Decision Tree using Gini</h5>
+                <img src="../../recourses/img/plots/dt_gini_mass.png" width="600px" alt ="Decision Trees Mass Shooting Gini" class="img-fluid mb-3">
+            </div>
+            <div id="mass_shootings_dt-conclusions">
+                <h5 class="mt-4">Conclusions</h5>
+                <p> 
+                    These decision tree visualizations reveal that “Victims Injured” is consistently the most influential feature in predicting the severity of an incident, as all models—Entropy, Gini with limited leaf nodes, and Gini with shallow depth—begin their splits with this variable. 
+                    This suggests a strong correlation between injury count and fatal outcomes. 
+                    Incidents with fewer injuries tend to result in fewer fatalities, while higher injury counts are associated with more severe consequences. 
+                    Additional features like “Suspects Arrested” and “Suspects Killed” serve as secondary predictors, helping to further distinguish between outcomes and indicating that the suspects' involvement plays a role in the overall lethality of the event. 
+                    The consistency across models points to stable patterns in the data, while the shallow tree emphasizes the most dominant relationships without overfitting. 
+                    Altogether, these trees demonstrate that monitoring key variables such as victim injuries and suspect actions can help forecast the severity of future incidents and guide more informed decision-making in public safety contexts. 
+                </p>
+            </div>
+        </section>    
+    </article>
+
+    <script src="../../recourses/js/script.js"></script>
+</body>
+</html>

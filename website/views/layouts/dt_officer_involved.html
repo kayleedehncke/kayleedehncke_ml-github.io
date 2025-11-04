@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DT - Officer Involved Shootings</title>
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../recourses/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+    
+    <article>
+        <h3 class="container mt-4">Officer Involved Shootings</h3>
+        <section class="container mt-4" id="officer_shootings_dt">
+            <div id="officer_shootings_dt-raw_data">
+                <h5>Sample Data</h5>
+                <img src="../../recourses/img/tables/officer_raw_table.png" alt="Officer Involved Shootings Raw Data Table" class="img-fluid mb-3">
+                <a href="../../data/gunviolencearchive_officer_shooting_all_years.csv" target="_self">
+                    Click here to view the full sample dataset.
+                </a>
+            </div>
+            <div id="officer_shootings_dt-train">
+                <h5 class="mt-4">Training Data</h5>
+                <img src="../../recourses/img/tables/dt_train_officer.png" alt="Decision Trees Officer Involved Shooting Training Data Table" class="img-fluid my-3">
+            </div>
+            <div id="officer_shootings_dt-train">
+                <h5 class="mt-4">Testing Data</h5>
+                <img src="../../recourses/img/tables/dt_test_officer.png" alt="Decision Trees Officer Involved Shooting Test Data Table" class="img-fluid mb-3">
+            </div>
+            <div id="officer_shootings_dt-results">
+                <h5 class="mt-4">Confusion Matrix</h5>
+                <img src="../../recourses/img/plots/dt_cm_officer.png" width="600px" alt ="Decision Trees Mass Shooting Confusion Matrix" class="img-fluid mb-3">
+                <h5 class="mt-4">Feature Importance</h5>
+                <img src="../../recourses/img/plots/dt_feature_importance_officer.png" width="600px" alt ="Decision Trees Mass Shooting Feature Importance" class="img-fluid mb-3">
+                <h5 class="mt-4">Decision Tree using Random Forest</h5>
+                <img src="../../recourses/img/plots/dt_rf_officer.png" width="600px" alt ="Decision Trees Mass Shooting Random Forest" class="img-fluid mb-3">
+                <h5 class="mt-4">Shallow Decision Tree</h5>
+                <img src="../../recourses/img/plots/dt_shallow_officer.png" width="600px" alt ="Decision Trees Mass Shooting Shallow" class="img-fluid mb-3">
+                <h5 class="mt-4">Decision Tree using Entropy</h5>
+                <img src="../../recourses/img/plots/dt_entropy_officer.png" width="600px" alt ="Decision Trees Mass Shooting Entropy" class="img-fluid mb-3">
+                <h5 class="mt-4">Decision Tree using Gini</h5>
+                <img src="../../recourses/img/plots/dt_gini_officer.png" width="600px" alt ="Decision Trees Mass Shooting Gini" class="img-fluid mb-3">
+            </div>
+            <div id="officer_shootings_dt-conclusions">
+                <h5 class="mt-4">Conclusions</h5>
+                <p>
+                    From these decision tree visualizations, we can see that “Victims Injured” is the most important predictor for determining whether an incident involves fatalities or not. 
+                    Both the Gini and Entropy models split first on this feature, showing that the number of victims injured is strongly associated with the overall severity of the shooting event.
+
+                    The trees also suggest that incidents with fewer injuries tend to have fewer deaths, while higher injury counts correlate with a higher likelihood of fatalities. 
+                    Secondary predictors like “Suspects Killed” and “Suspects Arrested” further refine the classification, indicating that outcomes involving suspects' fates may also relate to the event's overall lethality.
+
+                    The similarity between the Gini and Entropy trees indicates stable relationships in the data, while the shallow tree (limited depth of 3) highlights only the most dominant patterns without overfitting. 
+                    Overall, this analysis suggests that by tracking variables like injuries and suspect outcomes, we can predict the relative severity of future shooting incidents and identify which features most strongly contribute to fatal outcomes.
+                </p>
+            </div>
+        </section>    
+    </article>
+
+    <script src="../../recourses/js/script.js"></script>
+</body>
+</html>

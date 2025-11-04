@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DT - School Shootings</title>
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../recourses/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+    
+    <article>
+        <h3 class="container mt-4">School Shootings</h3>
+        <section class="container mt-4" id="school_shootings_dt">
+            <div id="school_shootings_dt-raw_data">
+                <h5>Sample Data</h5>
+                <img src="../../recourses/img/tables/school_raw_table.png" alt="School Shootings Raw Data Table" class="img-fluid mb-3">
+                <a href="../../data/gunviolencearchive_school_shooting_all_years.csv" target="_self">
+                    Click here to view the full sample dataset.
+                </a>
+            </div>
+            <div id="school_shootings_dt-train">
+                <h5 class="mt-4">Training Data</h5>
+                <img src="../../recourses/img/tables/dt_train_school.png" alt="Decision Trees School Shooting Training Data Table" class="img-fluid my-3">
+            </div>
+            <div id="school_shootings_dt-train">
+                <h5 class="mt-4">Testing Data</h5>
+                <img src="../../recourses/img/tables/dt_test_school.png" alt="Decision Trees School Shooting Test Data Table" class="img-fluid mb-3">
+            </div>
+            <div id="school_shootings_dt-results">
+                <h5 class="mt-4">Confusion Matrix</h5>
+                <img src="../../recourses/img/plots/dt_cm_school.png" width="600px" alt ="Decision Trees Mass Shooting Confusion Matrix" class="img-fluid mb-3">
+                <h5 class="mt-4">Feature Importance</h5>
+                <img src="../../recourses/img/plots/dt_feature_importance_school.png" width="600px" alt ="Decision Trees Mass Shooting Feature Importance" class="img-fluid mb-3">
+                <h5 class="mt-4">Decision Tree using Random Forest</h5>
+                <img src="../../recourses/img/plots/dt_rf_school.png" width="600px" alt ="Decision Trees Mass Shooting Random Forest" class="img-fluid mb-3">
+                <h5 class="mt-4">Shallow Decision Tree</h5>
+                <img src="../../recourses/img/plots/dt_shallow_school.png" width="600px" alt ="Decision Trees Mass Shooting Shallow" class="img-fluid mb-3">
+                <h5 class="mt-4">Decision Tree using Entropy</h5>
+                <img src="../../recourses/img/plots/dt_entropy_school.png" width="600px" alt ="Decision Trees Mass Shooting Entropy" class="img-fluid mb-3">
+                <h5 class="mt-4">Decision Tree using Gini</h5>
+                <img src="../../recourses/img/plots/dt_gini_school.png" width="600px" alt ="Decision Trees Mass Shooting Gini" class="img-fluid mb-3">
+            </div>
+            <div id="school_shootings_dt-conclusions">
+                <h5 class="mt-4">Conclusions</h5>
+                <p> 
+                    From the additional decision tree visualizations and the feature importance chart, it becomes even clearer that “Victims Injured” is the most dominant predictor in classifying the severity of school shooting incidents. 
+                    This feature consistently appears at the root of the trees and holds the highest importance score in the bar chart, reinforcing its central role in the model's decision-making process.
+                </p>
+                <p>
+                    The trees also show that when the number of victims injured is low, the model confidently predicts less severe outcomes, often with very low impurity values. 
+                    Conversely, higher injury counts lead to more complex branches involving features like “Suspects Killed” and “Suspects Arrested,” which help refine predictions about fatality likelihood. 
+                    These secondary features contribute meaningfully but are less influential than victim injury levels.
+                </p>
+                <p>
+                    The confusion matrix reveals that while the model achieves high overall accuracy (97%), it struggles to correctly identify positive cases (fatal incidents), as shown by the low recall (0.09) and F1 score (0.16). 
+                    This suggests that the model is better at recognizing non-fatal events than fatal ones, likely due to class imbalance in the dataset.
+                </p>
+                <p>
+                    Overall, these insights highlight that injury counts are the strongest signal for predicting incident severity, and that improving the model's sensitivity to fatal cases may require addressing data imbalance or incorporating additional contextual features. 
+                </p>
+            </div>
+        </section>    
+    </article>
+
+    <script src="../../recourses/js/script.js"></script>
+</body>
+</html>

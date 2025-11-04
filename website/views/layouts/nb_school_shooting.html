@@ -18,9 +18,44 @@
     <div id="navbar-placeholder"></div>
     
     <article>
+        <h3 class="container mt-4">School Shootings</h3>
         <section class="container mt-4" id="school_shootings_nb">
-            <h3 class="container mt-4">School Shootings</h3>
-            
+            <div id="school_shootings_nb-raw_data">
+                <h5>Sample Data</h5>
+                <img src="../../recourses/img/tables/school_raw_table.png" alt="School Shootings Raw Data Table" class="img-fluid mb-3">
+                <a href="../../data/gunviolencearchive_school_shooting_all_years.csv" target="_self">
+                    Click here to view the full sample dataset.
+                </a>
+            </div>
+            <div id="school_shootings_nb-train">
+                <h5 class="mt-4">Training Data</h5>
+                <img src="../../recourses/img/tables/nb_train_school.png" alt="Naive Bayes School Shooting Training Data Table" class="img-fluid my-3">
+            </div>
+            <div id="school_shootings_nb-train">
+                <h5 class="mt-4">Testing Data</h5>
+                <img src="../../recourses/img/tables/nb_test_school.png" alt="Naive Bayes School Shooting Test Data Table" class="img-fluid mb-3">
+            </div>
+            <div id="school_shootings_nb-results">
+                <h5 class="mt-4">Confusion Matrix</h5>
+                <img src="../../recourses/img/plots/nb_cm_school.png" width="800px" alt ="Naive Bayes School Shooting Confusion Matrix" class="img-fluid mb-3">
+            </div>
+            <div id="school_shootings_nb-conclusions">
+                <h5 class="mt-4">Conclusions</h5>
+                <p> 
+                    From the confusion matrix and performance metrics of the Naive Bayes Classifier applied to the school shooting dataset, we observe that the model achieves high overall accuracy (94%) but struggles to correctly identify actual shooting incidents. 
+                    The classifier produces a large number of true negatives (2312), meaning it is effective at recognizing non-shooting events. 
+                    However, the relatively low number of true positives (22) and high number of false negatives (65) indicate that many real incidents are missed.
+                </p>
+                <p>
+                    This imbalance is reflected in the low recall score of 0.25, showing that only 25% of actual positive cases are correctly identified. 
+                    The F1 score of 0.23 further highlights the model's difficulty in balancing precision and recall. 
+                    These results suggest that while the Naive Bayes model is good at ruling out false alarms, it is not reliable for detecting true shooting incidents, which limits its usefulness in high-risk scenarios.
+                </p>
+                <p>
+                    To improve its performance, the model may require more representative training data, better feature selection, or alternative algorithms that can handle class imbalance more effectively. 
+                    This analysis underscores the importance of evaluating models beyond accuracy, especially when dealing with rare but critical events. 
+                </p>
+            </div>
         </section>    
     </article>
 

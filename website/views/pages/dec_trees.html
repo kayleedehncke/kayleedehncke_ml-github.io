@@ -16,7 +16,151 @@
 <body>
     <!-- Navigation Bar -->
     <div id="navbar-placeholder"></div>
+    <article class="container mt-4">
+        <section id="dt_overview">
+            <h3 class="mb-4">Decision Trees</h3>
+            <!-- <p>
+                Decision Trees are a type of supervised machine learning algorithm used for both classification and regression tasks. 
+                They work by recursively splitting the data into subsets based on the values of input features, creating a tree-like structure 
+                where each internal node represents a decision based on a feature, each branch represents the outcome of that decision, 
+                and each leaf node represents a final prediction or output.
+            </p>
+            <p>
+                The process of building a decision tree involves selecting the best feature to split the data at each node, 
+                which is typically done using criteria such as Gini impurity, information gain, or mean squared error (for regression). 
+                The goal is to create splits that result in the most homogeneous subsets possible, thereby improving the accuracy of predictions.
+            </p>
+            <p>
+                Decision Trees are popular due to their interpretability, as they provide a clear visual representation of the decision-making process. 
+                They can handle both numerical and categorical data and are capable of capturing complex relationships between features. 
+                However, they are prone to overfitting, especially when the tree becomes too deep and captures noise in the training data. 
+                To mitigate this, techniques such as pruning, setting a maximum depth, or requiring a minimum number of samples per leaf can be employed.
+            </p>
+            <p>
+                In this project, Decision Trees are utilized to classify data points based on their features, allowing for straightforward interpretation 
+                of how decisions are made within the model. The performance of the Decision Tree classifier is evaluated using metrics such as accuracy, 
+                precision, recall, and F1 score to ensure its effectiveness in making predictions on unseen data.
+            </p> -->
+            <p>
+                Decision Trees (DTs) are a popular supervised machine learning method used for both 
+                classification and regression tasks. They work by recursively splitting the dataset 
+                into subsets based on feature values that yield the highest separation between target 
+                classes. Each internal node represents a decision based on an attribute, each branch 
+                corresponds to an outcome of that decision, and each leaf node represents a final 
+                class label or numerical prediction.
+            </p>
 
+            <p>
+                Decision Trees are widely used because they are easy to interpret, handle both 
+                numerical and categorical data, and require little data preparation. However, 
+                they can easily overfit the data if not properly pruned or regularized.
+            </p>
+
+            <div class="img-row">
+                <div class="img-col">
+                    <figure>
+                        <img src="../../recourses/img/images/dt_nodes.png"
+                            alt="Decision Tree Nodes Example"
+                            class="equal-height-img">
+                        <figcaption class="text-muted small">KD Nuggets</figcaption>
+                    </figure>
+                </div>
+                <div class="img-col">
+                    <figure>
+                        <img src="../../recourses/img/images/dt_basic.png"
+                            alt="Decision Tree Basic Example"
+                            class="equal-height-img">
+                        <figcaption class="text-muted small">Machine learning for discovery analytics to support criminal investigations</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section id="dt_info">
+            <h4>GINI, Entropy, and Information Gain</h3>
+            <p>
+                Decision Trees use metrics like Gini Impurity and Entropy 
+                to measure how mixed the target classes are within each node. The goal is to find 
+                splits that reduce impurity and maximize the Information Gain.
+            </p>
+
+            <p>
+                Entropy measures the randomness or disorder of a dataset and is defined as:
+            </p>
+            <pre><code>Entropy(S) = -Σ pᵢ log₂(pᵢ)</code></pre>
+
+            <p>
+                where <code>pᵢ</code> is the proportion of samples belonging to class <em>i</em>. 
+                A perfectly pure node (all samples in one class) has an entropy of 0.
+            </p>
+
+            <p>
+                Information Gain (IG) measures the reduction in entropy achieved 
+                by splitting the data on a particular attribute:
+            </p>
+            <pre><code>Information Gain = Entropy(Parent) - Σ ( |Subset| / |Parent| ) * Entropy(Subset )</code></pre>
+
+            <h5>Example: Calculating Entropy and Information Gain</h5>
+            <p>
+                Suppose we have 10 samples: 6 belong to <em>Class A</em> and 4 belong to <em>Class B</em>.
+            </p>
+
+            <pre><code>
+            Entropy(Parent) = - (6/10)log₂(6/10) - (4/10)log₂(4/10)
+            Entropy(Parent) = 0.970
+            </code></pre>
+
+            <p>
+                After splitting by some feature, we get two subsets:
+            </p>
+            <ul>
+                <li>Subset 1: 4 of Class A, 1 of Class B → Entropy = 0.721</li>
+                <li>Subset 2: 2 of Class A, 3 of Class B → Entropy = 0.971</li>
+            </ul>
+
+            <p>
+                Weighted average entropy of the split:
+            </p>
+            <pre><code>
+            Weighted Entropy = (5/10)*0.721 + (5/10)*0.971 = 0.846
+            Information Gain = 0.970 - 0.846 = 0.124
+            </code></pre>
+
+            <p>
+                This means the split reduces impurity by 0.124 bits of information.
+            </p>
+        </section>
+
+        <section id="dt_infinite">
+            <h4>Why Infinite Trees Are Possible</h4>
+            <p>
+                It is generally possible to create an infinite number of decision trees because small 
+                changes in training data, feature selection, or random splits can lead to entirely 
+                different structures. Furthermore, unless stopping criteria are set (like minimum 
+                samples per leaf or maximum depth), a tree can keep splitting until each leaf perfectly 
+                classifies its subset, leading to overfitting. This variability is one reason why 
+                ensemble methods like Random Forests combine many trees to produce more stable and 
+                generalizable predictions.
+            </p>
+            <a href="../../data/decision_trees.ipynb">Link to code</a>
+        </section>
+
+        <section id="code">
+            <section class="container mt-4" id="mass_shootings">
+                <h5>Mass Shootings</h5>
+                <a href="../layouts/dt_mass_shooting.html" class="btn btn-primary mb-3">View Details</a>
+            </section>
+
+            <section class="container mt-4" id="school_shootings">
+                <h5>School Shootings</h5>
+                <a href="../layouts/dt_school_shooting.html" class="btn btn-primary mb-3">View Details</a>
+            </section>
+
+            <section class="container mt-4" id="officer_involved">
+                <h5>Officer Involved Shootings</h5>
+                <a href="../layouts/dt_officer_involved.html" class="btn btn-primary mb-3">View Details</a>
+            </section>
+        </section>
+    </article>
     <script src="../../recourses/js/script.js"></script>
 </body>
 </html>

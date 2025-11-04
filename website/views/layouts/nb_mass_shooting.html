@@ -20,11 +20,40 @@
     <article>
         <h3 class="container mt-4">Mass Shootings</h3>
         <section class="container mt-4" id="mass_shootings_nb">
-            <h5>Sample Data</h5>
-            <img src="../../recourses/img/tables/mass_raw_table.png" alt="Mass Shootings Raw Data Table" class="img-fluid mb-3">
-            <a href="../../data/gunviolencearchive_mass_shooting_all_years.csv" target="_self">
-                Click here to view the full sample dataset.
-            </a>
+            <div id="mass_shootings_nb-raw_data">
+                <h5>Sample Data</h5>
+                <img src="../../recourses/img/tables/mass_raw_table.png" alt="Mass Shootings Raw Data Table" class="img-fluid mb-3">
+                <a href="../../data/gunviolencearchive_mass_shooting_all_years.csv" target="_self">
+                    Click here to view the full sample dataset.
+                </a>
+            </div>
+            <div id="mass_shootings_nb-train">
+                <h5 class="mt-4">Training Data</h5>
+                <img src="../../recourses/img/tables/nb_train_mass.png" alt="Naive Bayes Mass Shooting Training Data Table" class="img-fluid my-3">
+            </div>
+            <div id="mass_shootings_nb-train">
+                <h5 class="mt-4">Testing Data</h5>
+                <img src="../../recourses/img/tables/nb_test_mass.png" alt="Naive Bayes Mass Shooting Test Data Table" class="img-fluid mb-3">
+            </div>
+            <div id="mass_shootings_nb-results">
+                <h5 class="mt-4">Confusion Matrix</h5>
+                <img src="../../recourses/img/plots/nb_cm_mass.png" width="800px" alt ="Naive Bayes Mass Shooting Confusion Matrix" class="img-fluid mb-3">
+            </div>
+            <div id="mass_shootings_nb-conclusions">
+                <h5 class="mt-4">Conclusions</h5>
+                <p> From the confusion matrix and performance metrics of the Naive Bayes Classifier applied to the mass shooting dataset, we can see that the model struggles to accurately identify positive cases. 
+                    While it correctly classifies a moderate number of true positives (207), it also produces a high number of false negatives (643), meaning many actual incidents are missed by the model. 
+                    This is reflected in the low recall score of 0.24, indicating that only 24% of actual positive cases are correctly identified.
+                </p>
+                <p>
+                    The overall accuracy of 56% suggests that the model performs only slightly better than random guessing, and the F1 score of 0.38 highlights a weak balance between precision and recall. 
+                    The relatively high number of false positives (42) also shows that the model incorrectly flags non-events as incidents, which could lead to unnecessary concern or resource allocation.
+                </p>
+                <p>
+                    These results imply that while the Naive Bayes approach may offer some predictive value, it is not reliable enough for high-stakes decision-making in its current form. 
+                    Improving its performance would likely require more balanced data, feature engineering, or alternative modeling techniques better suited to the complexity of mass shooting prediction. 
+                </p>
+            </div>
         </section>    
     </article>
 

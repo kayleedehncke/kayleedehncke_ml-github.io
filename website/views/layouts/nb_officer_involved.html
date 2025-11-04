@@ -18,8 +18,44 @@
     <div id="navbar-placeholder"></div>
     
     <article>
-        <section class="container mt-4" id="officer_involved_shootings_nb">
-            <h3 class="container mt-4">Officer Involved Shootings</h3>   
+        <h3 class="container mt-4">Officer Involved Shootings</h3>
+        <section class="container mt-4" id="officer_shootings_nb">
+            <div id="officer_shootings_nb-raw_data">
+                <h5>Sample Data</h5>
+                <img src="../../recourses/img/tables/officer_raw_table.png" alt="Officer Involved Shootings Raw Data Table" class="img-fluid mb-3">
+                <a href="../../data/gunviolencearchive_officer_shooting_all_years.csv" target="_self">
+                    Click here to view the full sample dataset.
+                </a>
+            </div>
+            <div id="officer_shootings_nb-train">
+                <h5 class="mt-4">Training Data</h5>
+                <img src="../../recourses/img/tables/nb_train_officer.png" alt="Naive Bayes Officer Involved Shooting Training Data Table" class="img-fluid my-3">
+            </div>
+            <div id="officer_shootings_nb-train">
+                <h5 class="mt-4">Testing Data</h5>
+                <img src="../../recourses/img/tables/nb_test_officer.png" alt="Naive Bayes Officer Involved Shooting Test Data Table" class="img-fluid mb-3">
+            </div>
+            <div id="officer_shootings_nb-results">
+                <h5 class="mt-4">Confusion Matrix</h5>
+                <img src="../../recourses/img/plots/nb_cm_officer.png" width="800px" alt ="Naive Bayes Officer Involved Shooting Confusion Matrix" class="img-fluid mb-3">
+            </div>
+            <div id="officer_shootings_nb-conclusions">
+                <h5 class="mt-4">Conclusions</h5>
+                <p> 
+                    From the confusion matrix and performance metrics of the Naive Bayes Classifier applied to the officer-involved shooting dataset, we see that the model achieves relatively high overall accuracy (89%) but performs poorly in identifying actual shooting incidents. 
+                    The classifier correctly identifies a large number of true negatives (769), meaning it is effective at recognizing non-shooting cases. 
+                    However, it only detects 10 true positives and misses 86 actual incidents, resulting in a low recall score of 0.10.
+                </p>
+                <p>
+                    The F1 score of 0.17 further reflects the model's limited ability to balance precision and recall, suggesting that while it avoids many false alarms, it fails to capture the majority of true shooting events. 
+                    This imbalance highlights a common challenge in modeling rare but critical outcomes, where high accuracy can mask poor performance in identifying the cases that matter most.
+                </p>
+                <p>
+                    These results indicate that the Naive Bayes model may not be suitable for reliably detecting officer-involved shootings without further refinement. 
+                    Enhancing its sensitivity could involve addressing class imbalance, incorporating more nuanced features, or exploring alternative algorithms better equipped to handle skewed data distributions. 
+                </p>
+            </div>
+        </section>    
     </article>
 
     <script src="../../recourses/js/script.js"></script>
