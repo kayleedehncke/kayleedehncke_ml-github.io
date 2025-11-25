@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boosting</title>
+        <!-- Bootstrap CSS -->
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../../recourses/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-placeholder"></div>
+    <article>
+        <section class="container mt-4">
+            <h3 class="mb-4">Boosting</h3>
+            <p>
+                Boosting is an ensemble technique that builds a strong predictive model by combining many weak learners—simple models such as shallow decision trees that perform only slightly better than random guessing. 
+                Each weak learner is trained sequentially, with every new model focusing on the mistakes of the previous one. 
+                This iterative process steadily reduces bias while keeping variance under control, allowing the ensemble to generalize better than any individual tree. 
+                Boosting methods differ in how they correct errors: 
+                    AdaBoost increases the weights of misclassified samples so later learners pay more attention to the hardest cases, 
+                    while Gradient Boosting trains each new learner to predict the residual errors left by the current model. 
+                    XGBoost extends Gradient Boosting with additional regularization, faster optimization, and efficient handling of missing data, making it more robust and scalable.
+            </p>
+            <p>
+                Across all boosting approaches, the improvement in accuracy comes from repeatedly correcting the model's remaining errors, either by reweighting samples or by minimizing residuals through gradient-based updates. 
+                Key hyperparameters control how aggressively the ensemble learns: 
+                    the learning rate determines how much each new tree contributes, 
+                    the number of estimators sets how many weak learners are added to the sequence, 
+                    and the tree depth controls the complexity of each individual learner. 
+                Using many shallow trees with a low learning rate helps prevent overfitting while allowing the boosted model to capture complex patterns through gradual refinement.
+            </p>
+
+            <div class="pca-img-row">
+                <div class="pca-img-col">
+                    <figure>
+                    <img src="../../recourses/img/images/classifier.png"
+                        alt="Ensemble of Weak Learners">
+                    <figcaption class="text-muted small">Superlinked</figcaption>
+                    </figure>
+                </div>
+                <div class="pca-img-col">
+                    <figure>
+                    <img src="../../recourses/img/images/gradient.webp"
+                        alt="Gradient Flow">
+                    <figcaption class="text-muted small">Analytics Vidhya</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </article>
+    <script src="../../recourses/js/script.js"></script>
+</body>
+</html>
+
