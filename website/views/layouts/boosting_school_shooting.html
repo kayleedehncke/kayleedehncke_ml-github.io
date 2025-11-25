@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boosting - Mass Shootings</title>
+    <title>Boosting - School Shootings</title>
     <!-- Bootstrap CSS -->
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
@@ -18,37 +18,48 @@
     <div id="navbar-placeholder"></div>
     
     <article>
-        <h3 class="container mt-4">Mass Shootings</h3>
+        <h3 class="container mt-4">School Shootings</h3>
         <section class="container mt-4" id="school_shootings_boosting">
             <div id="school_shootings_boosting-raw_data">
                 <h5>Sample Data</h5>
-                <img src="../../recourses/img/tables/school_raw_table.png" alt="Mass Shootings Raw Data Table" class="img-fluid mb-3">
+                <img src="../../recourses/img/tables/school_raw_table.png" alt="School Shootings Raw Data Table" class="img-fluid mb-3">
                 <a href="../../data/gunviolencearchive_school_shooting.csv" target="_self">
                     Click here to view the full sample dataset.
                 </a>
             </div>
             <div id="school_shootings_boosting-train">
                 <h5 class="mt-4">Training Data</h5>
-                <img src="../../recourses/img/tables/boosting_train_school.png" alt="Boosting Mass Shooting Training Data Table" class="img-fluid my-3">
+                <img src="../../recourses/img/tables/boosting_train_school.png" alt="Boosting School Shooting Training Data Table" class="img-fluid my-3">
             </div>
             <div id="school_shootings_boosting-train">
                 <h5 class="mt-4">Testing Data</h5>
-                <img src="../../recourses/img/tables/boosting_test_school.png" alt="Boosting Mass Shooting Test Data Table" class="img-fluid mb-3">
+                <img src="../../recourses/img/tables/boosting_test_school.png" alt="Boosting School Shooting Test Data Table" class="img-fluid mb-3">
             </div>
             <div id="school_shootings_boosting-results">
                 <h5 class="mt-4">Confusion Matrix</h5>
-                <img src="../../recourses/img/plots/boosting_school_cm.png" width="600px" alt ="Boosting Mass Shooting Confusion Matrix" class="img-fluid mb-3">
+                <img src="../../recourses/img/plots/boosting_school_cm.png" width="600px" alt ="Boosting School Shooting Confusion Matrix" class="img-fluid mb-3">
                 <h5 class="mt-4">Feature Importance</h5>
-                <img src="../../recourses/img/plots/boosting_school_fi.png" width="600px" alt ="Boosting Mass Shooting Feature Importance" class="img-fluid mb-3">
+                <img src="../../recourses/img/plots/boosting_school_fi.png" width="600px" alt ="Boosting School Shooting Feature Importance" class="img-fluid mb-3">
                 <h5 class="mt-4">Error vs Estimators</h5>
-                <img src="../../recourses/img/plots/boosting_school_error.png" width="600px" alt ="Boosting Mass Shooting Error vs Estimators" class="img-fluid mb-3">
+                <img src="../../recourses/img/plots/boosting_school_error.png" width="600px" alt ="Boosting School Shooting Error vs Estimators" class="img-fluid mb-3">
                 <h5 class="mt-4">Comparison of Configurations</h5>
-                <img src="../../recourses/img/plots/boosting_school_comparison.png" width="600px" alt ="Boosting Mass Shooting Comparison of Configurations" class="img-fluid mb-3">
+                <img src="../../recourses/img/plots/boosting_school_comparison.png" width="600px" alt ="Boosting School Shooting Comparison of Configurations" class="img-fluid mb-3">
             </div>
             <div id="school_shootings_boosting-conclusions">
                 <h5 class="mt-4">Conclusions</h5>
-                <p> 
-                    
+                <p>
+                    The boosting method delivered strong performance in predicting fatal outcomes in mass shootings, with all tested configurations achieving an accuracy of 0.967. 
+                    Interestingly, all three setups—Config A, B, and C—performed identically in terms of accuracy, suggesting that the model is robust across a range of hyperparameter choices.
+                </p>
+                <p>
+                    While accuracy was high, the confusion matrix revealed a key limitation: the model was highly effective at identifying non-fatal incidents but struggled to correctly classify fatal ones. 
+                    This imbalance may be due to the dataset's skew toward non-fatal cases, which can bias the model toward the majority class. 
+                    Hyperparameter tuning had minimal impact on accuracy, but deeper trees and more estimators may still offer benefits in capturing rare patterns.
+                </p>
+                <p>
+                    Feature importance analysis showed that “Victims Injured” remained the most influential predictor, followed by “Suspects Killed” and “Suspects Arrested.” 
+                    These findings reinforce the connection between injury severity and fatality outcomes, aligning with the project's broader goal of understanding patterns in gun violence. 
+                    Boosting not only provided high predictive accuracy but also surfaced meaningful insights into which variables matter most in fatality prediction.
                 </p>
             </div>
         </section>    
